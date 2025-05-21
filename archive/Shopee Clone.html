@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopee Clone</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="topbar">
+            <span>Seller Centre | Start Selling | Download | Follow us on <i class="fab fa-facebook"></i> <i class="fab fa-instagram"></i></span>
+            <div class="right-links">
+                <span>Notifications | Help | English | <a href="#">Sign Up</a> | <a href="#">Login</a></span>
+            </div>
+        </div>
+        <div class="navbar">
+            <h1 class="logo">Shopee</h1>
+            <input type="text" placeholder="Search for products">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+            <div class="cart"><i class="fas fa-shopping-cart"></i></div>
+        </div>
+    </header>
+    
+    <section class="banner">
+        <img src="https://via.placeholder.com/1000x300" alt="Mega Sale Banner">
+    </section>
+
+    <section class="categories">
+        <div class="category">Shopee Mall</div>
+        <div class="category">20% Off Voucher</div>
+        <div class="category">Shopee Beauty</div>
+        <div class="category">Free Shipping</div>
+        <div class="category">Shopee Supermarket</div>
+    </section>
+
+    <section class="featured">
+        <h2>Featured Products</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="https://via.placeholder.com/150" alt="Product 1">
+                <h3>MAC Lipstick</h3>
+                <p class="price">₱850</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/150" alt="Product 2">
+                <h3>Skincare Set</h3>
+                <p class="price">₱599</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/150" alt="Product 3">
+                <h3>Summer Sandals</h3>
+                <p class="price">₱719</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', () => alert('Added to cart!'));
+        });
+    </script>
+</body>
+</html>

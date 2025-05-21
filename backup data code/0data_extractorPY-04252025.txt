@@ -1,0 +1,183 @@
+import re
+import os
+import shutil
+import pyodbc  # Import pyodbc for database connection
+from openpyxl import Workbook
+from datetime import datetime
+
+def connect_to_database():
+    """Establish a connection to the SQL Server database."""
+    connection_string = (
+        "Driver={SQL Server};"
+        "Server=MSDynamics-DB\\AXDB;"
+        "Database=MES_ATEC;"
+        "UID=sa;"
+        "PWD=p@ssw0rd;"
+        "TrustServerCertificate=Yes;"
+    )
+    try:
+        conn = pyodbc.connect(connection_string)
+        print("Database connection established.")
+        return conn
+    except pyodbc.Error as e:
+        print(f"Error connecting to database: {e}")
+        return None
+
+def parse_notepad_files(input_folder, backup_folder):
+    # Connect to the database
+    conn = connect_to_database()
+    if not conn:
+        print("Exiting program due to database connection failure.")
+        return  # Exit if the database connection fails
+
+    cursor = conn.cursor()
+
+    # Check if there are any files matching the pattern
+    notepad_files = [f for f in os.listdir(input_folder) if f.startswith("notepad") and f.endswith(".txt")]
+    if not notepad_files:
+        print("No notepad files found. Exiting program.")
+        return  # Exit the function if no files are found
+
+    # Create a new workbook for all extracted data
+    workbook = Workbook()
+    sheet = workbook.active
+    sheet.title = "Extracted Data"
+
+    # Write headers
+    sheet.append([
+        "Orderable Part Section", "Part Number", "Description", "Primary Die",
+        "Piece Parts", "Part NumberF", "DescriptionF", "Part NumberE", "DescriptionE",
+        "Part NumberW", "DescriptionW", "Part NumberM", "DescriptionM",
+        "Revision History (Date)", "Revision History (Details)"
+    ])
+
+    # Get the current date and time for file naming
+    now = datetime.now()
+    process_date = now.strftime("%m%d%Y")
+    timestamp = now.strftime("%m%d%S%Y")  # Format for the output file name
+
+    # Process all files matching the pattern
+    for file_name in notepad_files:
+        file_path = os.path.join(input_folder, file_name)
+        with open(file_path, 'r', encoding='utf-8') as file:
+            content = file.read()
+
+        # Clean up special characters
+        content = re.sub(r'[^\x00-\x7F]+', ' ', content)
+
+        # Extract "Orderable Part Section - <Dynamic>"
+        section_match = re.search(r"Orderable Part Section\s+(-\s+[^\n]+)", content)
+        section_name = section_match.group(1).strip() if section_match else "Section Not Found"
+
+        # Extract "Part Number | Desc"
+        part_number_desc = re.search(r"Part Number \| Desc\s+([^\n]+)", content)
+        if part_number_desc:
+            part_number_desc_value = part_number_desc.group(1)
+            # Split the part number and description
+            part_number, part_desc = map(str.strip, part_number_desc_value.split('|', 1))
+        else:
+            part_number = "Part Number Not Found"
+            part_desc = "Description Not Found"
+
+        # Extract BOM Components under Alternate
+        bom_components = re.search(r"Alternate 002.*?BOI 67-Bonding Diagram", content, re.DOTALL)
+        bom_section = bom_components.group(0) if bom_components else "BOM Components Not Found"
+
+        # Extract Primary Die value on the right
+        primary_die_match = re.search(r"Primary Die\s+([^\t\n]+)", bom_section)
+        primary_die = primary_die_match.group(1) if primary_die_match else "Primary Die Not Found"
+
+        # Extract Piece Parts section
+        piece_parts_match = re.search(r"Piece Parts\s+(.*?)\s+BOI", bom_section, re.DOTALL)
+        if piece_parts_match:
+            piece_parts_section = piece_parts_match.group(1)
+            # Extract individual piece parts (only long numbers followed by uppercase letters)
+            piece_parts = re.findall(r"(\d{10,})\s+([A-Z]+)", piece_parts_section)
+        else:
+            piece_parts_section = "Piece Parts Not Found"
+            piece_parts = []
+
+        # Extract Revision History (latest entry)
+        revision_history_match = re.search(
+            r"Revision History\s+Rev\s+Rev Date\s+Details\s+(\d+)\s+([^\s]+)", content, re.DOTALL
+        )
+        if revision_history_match:
+            revision_history = revision_history_match.group(1).strip()  # Extract the revision number
+            revision_date = revision_history_match.group(2).strip()  # Extract only the date
+        else:
+            revision_history = "Revision History Not Found"
+            revision_date = "Date Not Found"
+
+        # Extract PART_OWNER NOTIFY_SUPPLIER details
+        part_owner_match = re.search(r"PART_OWNER NOTIFY_SUPPLIER previous_value:NULL;new_value:([^\n]+)", content)
+        part_owner = part_owner_match.group(1).strip() if part_owner_match else "PART_OWNER NOTIFY_SUPPLIER Not Found"
+
+        # Prepare piece parts in a single row
+        piece_parts_flat = []
+        for part in piece_parts:
+            piece_parts_flat.extend([part[0], part[1]])  # Add Part Number and Description
+
+        # Write data in a single row
+        sheet.append([
+            section_name,
+            part_number,
+            part_desc,
+            primary_die,
+            "",  # Placeholder for "Piece Parts" column
+            *piece_parts_flat,  # Flattened piece parts
+            revision_date,
+            f"PART_OWNER NOTIFY_SUPPLIER previous_value:NULL;new_value:{part_owner}"
+        ])
+
+        # Check if the Part Number already exists in the database
+        cursor.execute("SELECT COUNT(*) FROM cst_onsemi_MBOIExtractedData WHERE [Part Number] = ?", part_number)
+        exists = cursor.fetchone()[0]
+
+        if exists:
+            print(f"Part Number '{part_number}' already exists. Skipping insertion.")
+        else:
+            # Insert data into the database
+            try:
+                cursor.execute("""
+                    INSERT INTO cst_onsemi_MBOIExtractedData (
+                        [Orderable Part Section], [Part Number], [Description], [Primary Die],
+                        [Piece Parts], [Part NumberF], [DescriptionF], [Part NumberE], [DescriptionE],
+                        [Part NumberW], [DescriptionW], [Part NumberM], [DescriptionM],
+                        [Revision History (Date)], [Revision History (Details)]
+                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """, section_name, part_number, part_desc, primary_die, "",  # Placeholder for "Piece Parts"
+                    piece_parts_flat[0] if len(piece_parts_flat) > 0 else None,
+                    piece_parts_flat[1] if len(piece_parts_flat) > 1 else None,
+                    piece_parts_flat[2] if len(piece_parts_flat) > 2 else None,
+                    piece_parts_flat[3] if len(piece_parts_flat) > 3 else None,
+                    piece_parts_flat[4] if len(piece_parts_flat) > 4 else None,
+                    piece_parts_flat[5] if len(piece_parts_flat) > 5 else None,
+                    piece_parts_flat[6] if len(piece_parts_flat) > 6 else None,
+                    piece_parts_flat[7] if len(piece_parts_flat) > 7 else None,
+                    revision_date,
+                    f"PART_OWNER NOTIFY_SUPPLIER previous_value:NULL;new_value:{part_owner}"
+                )
+                conn.commit()
+            except pyodbc.Error as e:
+                print(f"Error inserting data into database: {e}")
+
+        # Move the processed file to the backup folder with a new name
+        if not os.path.exists(backup_folder):
+            os.makedirs(backup_folder)
+        new_file_name = f"process_{process_date}_{file_name}"
+        shutil.move(file_path, os.path.join(backup_folder, new_file_name))
+
+    # Save the Excel file with the new naming format
+    output_file = os.path.join(input_folder, f"{timestamp}_extracted_data.xlsx")
+    workbook.save(output_file)
+    print(f"Data has been written to {output_file}")
+
+    # Close the database connection
+    conn.close()
+
+# Specify the input folder and backup folder
+input_folder = r"c:\Users\jc_it\Documents\python\Mboi Extraction"
+backup_folder = r"c:\Users\jc_it\Documents\python\Mboi Extraction\notepadbackup"
+
+# Process all notepad files
+parse_notepad_files(input_folder, backup_folder)

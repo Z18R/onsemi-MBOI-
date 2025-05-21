@@ -1,0 +1,363 @@
+Products
+Solutions
+Design
+Support
+Company
+Careers
+CU
+EN 
+
+	Manufacturing Info	
+	
+ 
+MBOI	 
+	
+ 
+Specifications	 
+
+	Supply	
+	
+ 
+Purchasing/Payables	 
+	
+ 
+Planning	 
+	
+ 
+APSFR	 
+
+	Factory Information	
+	
+ 
+Capacity Statement	 
+	
+ 
+Quality	 
+	
+ 
+Global EBR5	 
+	
+ 
+External Manufacturing MPE	 
+
+	Data Exchange	
+	
+ 
+Document Exchange	 
+	
+ 
+Intransit	 
+	
+ 
+Exceptions	 
+		
+PH4 ISPL (ATEC) (CU) MBOI Data
+
+Search Files:			MBOI Masters
+ASY (720)    MEF (4)    TST (784)    Open Compliance (607)    
+Search text is highlighted in RED 74LCX125MTC
+
+
+Manufacturing Bill of Information (MBOI)
+Part Number	74LCX125MTCX-ASY	Part Type	Assembly Part
+Site | Name | Loc Cod	PH4 | ISPL (ATEC) | CU	File Name	PH4_74LCX125MTCX_74LCX125MTCX-ASY_ASY
+Flags	Non Safe Launch Item
+No Global Hold Flag
+	Part Qual Target Market:	I | Industrial
+
+Part Version	28	Part Version Date-Time	2025-APR-17 20:02:02 (GMT +7)
+
+
+Orderable Part Section - OPN
+Part Number | Desc	74LCX125MTCX | LV Quad Buffer 3-State	Market PN	74LCX125MTCX
+Lifecycle Phase	Production	Part Class | Desc	AA | ASSEMBLED AND TESTED
+Marketing Product Lifecycle	Follow Part Lifecycle	Part Sub Type	OPN
+Part Release Status | Desc	MC-M | Mass Production	Part Usage	STD
+Case Outline (CO)	948G 	PAL4 Code | Desc	|
+Product Data Sheet	74LCX125-D.pdf
+ERP Resource Code - ASY | Desc	F304 | TSSOP14 AU SNGL HPBF	OPN Part Qual Target Market	I | Industrial
+Packing Configuration	TSSOP-14_948G_REEL_2500_FBQ5000	Eng Package Type	TSSOP-14
+
+
+Assembly_Part_Section - ASY
+Part Number	74LCX125MTCX-ASY	Description	LV Quad Buffer 3-State
+Lifecycle Phase	Production	Part Usage	STD
+Part Release Status | Desc	MC-M | Mass Production	Part Sub Type	ASY
+PAL4 Code | Desc	|	ERP Resource Code - ASY | Desc	F304 | TSSOP14 AU SNGL HPBF
+Part Qual Target Market	I | Industrial
+Case Outline (CO)	948G 	Package Type	TSSOP-14
+ECAT Override		Actual Lead Count	14
+Package Assembly Platform	SOSM - Small Outline Surface Mount	Assembly Baseline Spec	
+Assembly Process Flow Spec		Assembly Spec(s) - Global	
+Lot Processing Restrictions	Standard	Package Substrate Layout(s)	
+ITAR Part Flag	N	Customs Configuration	8542.39.0001
+Customs ECCN Code	EAR99	Customer Consigned Flag	N
+Compressed?		Compressed Part Number	
+Wettable Process Type		Wettable Flank Flag	
+Site Notes	
+
+
+
+BOM Components
+
+Alternate 002	Part Number	Part Sub Type	Line	Preference	Group	Qty	Description	Lifecycle Phase
+  Primary Die	7LCX125BDP65-WDQ 	WDQ	001	01	0	1	Low-Voltage CMOS Quad Buffer	Production
+	  Die Size (X + Y W/Scribe Street): 745 x 580	PDPW : 63835
+  Package Kit	N96938G012	PKT	002	01	0	1	PKGKIT TSSOP14 CU (PH4)	Production
+	  Piece Parts
+	    1010010421	FRAME	010	01	0	1	LF TSSOP14 HD 1.08x1.08MM C194 FH RING Ag 288u STAMPED	Production
+	    1010150057	EPXY	020	01	0	0.000248	DA Sumitomo CRM-1076WB	Production
+	    1010160064	WIRE	030	01	0	0.02282	BW MAXSOFT HR Cu 1.0 mil	Production
+	    1010190074	MOLD	040	01	0	0.125	MC EMC SUMITOMO G600 13X5.6 HF	Production
+  BOI 67-Bonding Diagram	67AON51758H L	DOC	003	01	0	1	00/02/03/04/05/06/07/08/10/11/125/126/132/14/16\34/50\/27/32/38/74/86 Device Family	Production
+
+
+Marking Header Section
+Marking Style Configuration	TSSOP_2L_8C	
+Standard Marking Flag	
+PB Free Mark Character Flag	
+Front Side Marking
+Line1:LCX
+Line2:125
+Tracecode:Y(LYW)
+
+
+
+
+
+Marking Details Section
+Trace Code Coding Std	ON_STD_021C : A(L)(YW) : (A01)(L11)(Y02L)(W02L)	Trace Code Coding Custom	
+Trace Code Legend - Front	A: Assembly Site
+L: Wafer Lot Number
+YW: Assembly Start Week
+Trace Code Legend - Back	
+Trace Code Spec	12MON00232D LK	Part Marking Source	PDM System
+Part Marking Image/CAD Document		Marking Style Image Document	18AON90319E O
+Custom Logo Document		ON Logo Document	18AON77167F O
+Final Test Specification	48AON88777F O
+
+
+OPN Packing Section
+PCQ Container | Desc	REEL | Tape and Reel	PCQ Quantity	2500
+MPQ Container | Desc	REEL | Tape and Reel	MPQ Quantity	2500
+Intermediate Full Box Container Type |
+Intermediate Box Container Size |
+Intermediate Full Box Container Quantity	|
+|
+5000	Intermediate Full Bag Container Type |
+Intermediate Bag Container Size |
+Intermediate Full Bag Container Quantity	|
+|
+
+
+
+
+
+Labeling Section
+MSL	1	MSL Temperature	260
+Pb Free Leads Flag	Y	Halide Free Flag	Y
+Pb Free Die Attach Flag	Y	Lead Finish Category (eCAT)	e4
+
+
+Document Group Section
+Document Num	Revision	Release Date	Title
+12MON00232D	LK	31-MAY-24	Standard Marking for Integrated Circuits
+12MON01117D	AD	20-JAN-25	Quality Assurance Inspection and Testing Sample Plan
+12MON03769D	Z	05-JUN-24	External Visual Inspection Criteria
+12MON49004E	AE	27-MAY-24	Subcontractors Bar Code Labeling
+12MRB17500B	FN	24-JAN-25	Finished Goods Packing and Long Term Storage Procedure
+12MRM92695A	AE	27-FEB-24	Lot Combination Control Requirements for onsemi
+48AON88777F	O	06-NOV-14	Placeholder document for EDAC
+67AON51758H	L	12-MAR-25	00/02/03/04/05/06/07/08/10/11/125/126/132/14/16\34/50\/27/32/38/74/86 Device Family
+
+
+BOM Links
+Up/Down Direction	Site	Top Part	Link
+Up	PH4	74LCX125MTCX	PH4_74LCX125MTCX_74LCX125MTCX-TST_TST.XML
+
+
+Revision History
+Rev	Rev Date	Details
+28	2025-APR-17 19:30:24	Added Component:74LCX125MTCX-TST
+Added Component:74LCX125MTCX-ASY
+Added Component:1010010421
+Added Component:1010190074
+Added Component:1010150057
+Added Component:1010160064
+Added Component:67AON51758H
+Added Component:N96938G012
+Added Component:7LCX125BDP65-WDQ
+27	2025-APR-04 17:37:34	Added Component:1010010421,ALT_BILL:001,BOM_LINE:010,COMPRESS_SITE:NULL,QTY_STD_CONVERSION:1,SC_ROUTING_KIND:PKT,UOM:ea
+Added Component:1010190074
+Added Component:1010150057
+Added Component:1010160064
+Added Component:74LCX125MTCX-ASY
+Added Component:74LCX125MTCX-TST
+Added Component:67AON51758H
+Added Component:N96938G012
+Added Component:7LCX125BDP65-WDQ
+26	2025-MAR-02 22:13:20	
+CONSOLIDATED_MARK_MACHINE_CUST CONFIRM_REQUIRED previous_value:$Y&Z&2&KLCX125UNKUNKUNK;new_value:NULL
+DATE_CD_TYPE CONFIRM_REQUIRED previous_value:S2;new_value:NULL
+LINE_MARK_ROT_PIN1 UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:0
+MARK_STYLE_CONFIG_ID CONFIRM_REQUIRED previous_value:NO_STANDARD_MARKING_STYLE;new_value:TSSOP_2L_8C
+MARK_STYLE_SPEC UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:ON Standard
+ON_LOGO_DOC CONFIRM_REQUIRED previous_value:NULL;new_value:18AON77167F
+PART_MARK_SPEC_SOURCE CONFIRM_REQUIRED previous_value:NULL;new_value:PDM System
+PB_FREE_IND_G_CD_IND UPDATE_FILE_AND_VERSION previous_value:None;new_value:Microdot
+PIN1_IND UPDATE_FILE_AND_VERSION previous_value:N/A;new_value:Dot
+TRACE_CD_SPEC UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:12MON00232D
+TRACE_CODE_CODING_STD CONFIRM_REQUIRED previous_value:NULL;new_value:ON_STD_021C : A(L)(YW) : (A01)(L11)(Y02L)(W02L)
+TRACE_CODE_LEGEND_F CONFIRM_REQUIRED previous_value:NULL;new_value:A: Assembly Site; L: Wafer Lot Number; YW: Assembly Start Week
+25	2025-FEB-12 03:05:41	Deleted Component:67AON20134G
+Deleted Component:N17608G030
+Deleted Component:LCX125-YCC3026D-WDQ
+24	2025-JAN-16 04:19:19	Added Component:13601610001
+Added Component:1360191000
+Added Component:13601510002
+Added Component:1360100014
+Added Component:N17608G030
+Added Component:LCX125-YCC3026D-WDQ
+Added Component:67AON20134G
+23	2024-NOV-21 02:35:02	Added Component:74LCX125MTCX-TST,ALT_BILL:000,BOM_LINE:001,COMPRESS_SITE:Y,QTY_STD_CONVERSION:1,SC_ROUTING_KIND:NULL,UOM:ea
+22	2024-NOV-16 20:18:04	Added Component:74LCX125MTCX-ASY,ALT_BILL:002,BOM_LINE:001,COMPRESS_SITE:NULL,QTY_STD_CONVERSION:1,SC_ROUTING_KIND:TST+OPN,UOM:ea
+Added Component:74LCX125MTCX-TST
+Added Component:67AON51758H
+Added Component:7LCX125BDP65-WDQ
+Added Component:N96938G012
+Added Component:1010150057
+Added Component:1360194003
+Added Component:1010010421
+Added Component:1010160064
+21	2024-NOV-06 21:26:54	Added Component:67AON51758H,ALT_BILL:002,BOM_LINE:003,COMPRESS_SITE:NULL,QTY_STD_CONVERSION:1,SC_ROUTING_KIND:ASY,UOM:ea
+Added Component:7LCX125BDP65-WDQ
+Added Component:N96938G012
+Added Component:1010150057
+Added Component:1360194003
+Added Component:1010010421
+Added Component:1010160064
+Deleted Component:67AON20134G
+Deleted Component:LCX125-YCC3026D-WDQ
+Deleted Component:N17608G030
+20	2024-OCT-17 02:43:55	
+PART_OWNER NOTIFY_SUPPLIER previous_value:NULL;new_value:Jeff Galgo (ffx3xt)
+19	2023-NOV-25 02:06:11	Added Component:67AON20134G
+Added Component:N17608G030
+Added Component:LCX125-YCC3026D-WDQ
+18	2021-DEC-17 20:10:50	DRY_PACK_FLG_OVERRIDE CONFIRM_REQUIRED previous_value:N;new_value:NULL
+HALIDE_FREE_FLG CONFIRM_REQUIRED previous_value:Y;new_value:NULL
+17	2021-DEC-16 17:37:42	
+ASSMB_PLATFORM UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:SOSM - Small Outline Surface Mount
+ASSMB_PLATFORM_DESC UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:Small Outline Surface Mount
+16	2021-NOV-19 08:04:05	
+PACKING_CONFIG_ID UPDATE_FILE_AND_VERSION previous_value:TSSOP-14_948G_REEL_2500;new_value:TSSOP-14_948G_REEL_2500_FBQ5000
+15	2021-NOV-15 11:08:54	
+ASSMB_PLATFORM UPDATE_FILE_AND_VERSION previous_value:SOSM - Small Outline Surface Mount;new_value:NULL
+ASSMB_PLATFORM_DESC UPDATE_FILE_AND_VERSION previous_value:Small Outline Surface Mount;new_value:NULL
+SKIP_LOT_QC_FLG UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:Y
+14	2019-SEP-28 04:15:29	PAL4_CD UPDATE_FILE_AND_VERSION previous_value:FKLA;new_value:PKLZ
+PAL4_CD UPDATE_FILE_AND_VERSION previous_value:FKLA;new_value:PKLZ
+13	2019-SEP-28 03:42:21	PAL4_CD UPDATE_FILE_AND_VERSION previous_value:FKLA;new_value:PKLZ
+PAL4_CD UPDATE_FILE_AND_VERSION previous_value:FKLA;new_value:PKLZ
+12	2019-AUG-23 08:16:16	
+PART_REL_DATE_FCST UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:12-SEP-95
+11	2019-MAR-01 09:36:59	BODY_SIZE_DESC UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:4.4
+BODY_SIZE_DESC UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:4.4
+10	2018-JUN-20 16:06:47	MSL CONFIRM_REQUIRED previous_value:1;new_value:NULL
+MSL_BAKE_FLG UPDATE_FILE_AND_VERSION previous_value:N;new_value:NULL
+MSL_TEMP CONFIRM_REQUIRED previous_value:260;new_value:NULL
+9	2018-JAN-18 12:16:06	
+PART_REL_DATE_PROD UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:12-SEP-95
+8	2017-DEC-15 12:11:32	DRY_PACK_FLG_OVERRIDE UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:N
+MSL_BAKE_FLG UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:N
+DRY_PACK_FLG_OVERRIDE UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:N
+MSL_BAKE_FLG UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:N
+7	2017-SEP-20 04:06:33	PACK_ORIENT_STD UPDATE_FILE_AND_VERSION previous_value:Consult Factory;new_value:Pin 1 Toward Upper Left
+6	2017-SEP-03 20:11:23	CONSOLIDATED_MARK_MACHINE_CUST UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:$Y&Z&2&KLCX125UNKUNKUNK
+CUSTOM_TRACE_CD_SPEC UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:12MON45426G
+DATE_CD_TYPE UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:S2
+5	2017-AUG-07 22:39:41	PART_QUAL_TRGT_MKT_CD UPDATE_FILE_AND_VERSION previous_value:C;new_value:I
+PART_QUAL_TRGT_MKT_DESC UPDATE_FILE_AND_VERSION previous_value:Commercial;new_value:Industrial
+4	2017-JUL-26 16:05:35	Added Component:1360100014
+Added Component:13601610001
+Added Component:1360191000
+Added Component:13601510001
+Added Component:67AON20134G
+Added Component:LCX125-YCC3026D-WDQ
+Added Component:N17608G030
+Added Component:74LCX125MTCX-TST
+Added Component:74LCX125MTCX-ASY
+3	2017-MAY-20 04:12:55	PACK_ORIENT_STD UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:Consult Factory
+PB_FREE_IND_G_CD_IND UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:None
+PIN1_IND UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:N/A
+POLARITY_IND UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:NA
+2	2017-MAY-01 16:14:59	ASSMB_PLATFORM_DESC UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:Small Outline Surface Mount
+CONTROLLING_DOC UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:48AON88777F
+GLOBAL_HOLD_FLG UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:N
+ITAR_PART_FLG UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:N
+LEAD_FORM_FLG UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:N
+LIFECYCLE_PHASE NOTIFY_SUPPLIER previous_value:NULL;new_value:Production
+LOT_PROC_RESTRICTIONS UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:Standard
+MIL_DOCUMENT UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:NA
+MIL_PROC_FLOW UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:NA
+MIL_QUAL_CLASS UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:NA
+MKTG_PROD_LIFECYCLE UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:Follow Part Lifecycle
+PAL4_CD UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:FKLA
+PART_NO UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:74LCX125MTCX
+PART_QUAL_TRGT_MKT_CD UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:C
+PART_QUAL_TRGT_MKT_DESC UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:Commercial
+PART_SUB_TYPE UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:OPN
+PART_TYPE UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:Orderable Part
+PART_USAGE UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:STD
+PC_LEAD_COUNT UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:14
+QUALITY_HOLD_FLG UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:N
+SAFE_LAUNCH_FLG NOTIFY_SUPPLIER previous_value:NULL;new_value:N
+STD_MARK_FLG UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:Y
+Added Component:1360100014
+Added Component:13601610001
+Added Component:1360191000
+Added Component:13601510001
+Added Component:67AON20134G
+Added Component:LCX125-YCC3026D-WDQ
+Added Component:N17608G030
+Added Component:74LCX125MTCX-ASY
+Added Component:74LCX125MTCX-TST
+1	2017-MAY-01 16:13:35	Initial Version
+
+Intelligent Technology. Better Future.
+    
+ Language 
+About onsemi
+Locations
+Leadership
+Company Overview
+Company History
+Quality and Reliability
+Intellectual Property
+Investor Relations
+Financial Results
+Stock Performance
+Corporate Governance
+Investor Events
+Investor News
+Investor FAQs
+News & Media
+Press Announcements
+Blog
+In The News
+Media Contacts
+Careers
+Start Your Career
+Professionals
+Students
+Who We Are
+Compensation & Benefits
+Accessibility
+Do Not Sell or Share My Personal Information
+Terms of Use
+Terms of Sale
+Cookie Policy
+Privacy
+Subscribe
+Site Map
+© Copyright 1999-2025 Semiconductor Components Industries, LLC

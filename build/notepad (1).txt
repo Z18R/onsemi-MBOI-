@@ -1,0 +1,322 @@
+Products
+Solutions
+Design
+Support
+Company
+Careers
+CU
+EN 
+
+	Manufacturing Info	
+	
+ 
+MBOI	 
+	
+ 
+Specifications	 
+
+	Supply	
+	
+ 
+Purchasing/Payables	 
+	
+ 
+Planning	 
+	
+ 
+APSFR	 
+
+	Factory Information	
+	
+ 
+Capacity Statement	 
+	
+ 
+Quality	 
+	
+ 
+Global EBR5	 
+	
+ 
+External Manufacturing MPE	 
+
+	Data Exchange	
+	
+ 
+Document Exchange	 
+	
+ 
+Intransit	 
+	
+ 
+Exceptions	 
+		
+PH4 ISPL (ATEC) (CU) MBOI Data
+
+Search Files:			MBOI Masters
+ASY (720)    MEF (4)    TST (784)    Open Compliance (136)    
+Search text is highlighted in RED MC74HCT138A
+
+
+Manufacturing Bill of Information (MBOI)
+Part Number	99MC74HCT138ADTG	Part Type	Assembly Part
+Site | Name | Loc Cod	PH4 | ISPL (ATEC) | CU	File Name	PH4_MC74HCT138ADTR2G_99MC74HCT138ADTG_ASY
+Flags	Non Safe Launch Item
+No Global Hold Flag
+	Part Qual Target Market:	U | Unspecified
+
+Part Version	15	Part Version Date-Time	2025-APR-26 20:06:52 (GMT +7)
+
+
+Orderable Part Section - OPN
+Part Number | Desc	MC74HCT138ADTR2G | 1OF8 DECODER/DEMULTIPLE	Market PN	MC74HCT138ADTR2G
+Lifecycle Phase	Production	Part Class | Desc	AA | ASSEMBLED AND TESTED
+Marketing Product Lifecycle	Follow Part Lifecycle	Part Sub Type	OPN
+Part Release Status | Desc	MC-M | Mass Production	Part Usage	STD
+Case Outline (CO)	948F-01 	PAL4 Code | Desc	|
+Product Data Sheet	MC74HC138A-D.PDF
+ERP Resource Code - ASY | Desc	7049 | TSSOP 16 5*4.4 CPR PBF H	OPN Part Qual Target Market	U | Unspecified
+Packing Configuration	TSSOP-16_948F_REEL_2500_FBQ5000	Eng Package Type	TSSOP-16
+
+
+Assembly_Part_Section - ASY
+Part Number	99MC74HCT138ADTG	Description	ASSY RAWSTOCK
+Lifecycle Phase	Production	Part Usage	STD
+Part Release Status | Desc	MC-M | Mass Production	Part Sub Type	ASY
+PAL4 Code | Desc	|	ERP Resource Code - ASY | Desc	7049 | TSSOP 16 5*4.4 CPR PBF H
+Part Qual Target Market	U | Unspecified
+Case Outline (CO)	948F-01 	Package Type	TSSOP-16
+ECAT Override		Actual Lead Count	16
+Package Assembly Platform	SOSM - Small Outline Surface Mount	Assembly Baseline Spec	
+Assembly Process Flow Spec		Assembly Spec(s) - Global	
+Lot Processing Restrictions	Standard	Package Substrate Layout(s)	
+ITAR Part Flag	N	Customs Configuration	8542.39.0001
+Customs ECCN Code	EAR99	Customer Consigned Flag	N
+Compressed?		Compressed Part Number	
+Wettable Process Type		Wettable Flank Flag	
+Site Notes	
+
+
+
+BOM Components
+
+Alternate 002	Part Number	Part Sub Type	Line	Preference	Group	Qty	Description	Lifecycle Phase
+  Primary Die	DBTHCT138ABC46B 	WDQ	001	01	0	1	TOWER HSL DIE	Production
+	  Die Size (X + Y W/Scribe Street): 603 x 598	PDPW : 41465
+  Package Kit	N96938G002	PKT	002	01	0	1	PKGKIT TSSOP16 CU (PH4)	Production
+	  Piece Parts
+	    1360100038	FRAME	010	01	0	1	LF; TSSOP 16L 1.016x1.067mm	Production
+	    1010150057	EPXY	020	01	0	0.000248	DA Sumitomo CRM-1076WB	Production
+	    1360162001	WIRE	030	01	0	0.02282	BW Maxsoft 0.8 mil Cu Wire	Production
+	    1360194003	MOLD	040	01	0	0.14167	MC EMC Sumitomo G600 13 X 5.0	Production
+  Package Kit	N96938G005	PKT	002	02	0	1	PKGKIT TSSOP16 CU (PH4)	Production
+	  Piece Parts
+	    1360100041	FRAME	010	01	0	1	LF TSSOP16 1.080X1.080MM HDLF PPF STAMPED	Production
+	    1360162001	WIRE	020	01	0	1	BW Maxsoft 0.8 mil Cu Wire	Production
+	    1010150057	EPXY	030	01	0	1	DA Sumitomo CRM-1076WB	Production
+	    1010190072	MOLD	040	01	0	1	MC EMC Sumitomo G600 14 x 5.7	Production
+  BOI 67-Bonding Diagram	67AON46906E C	DOC	003	01	0	1	MC74HCT138ADT	Production
+
+Alternate 004	Part Number	Part Sub Type	Line	Preference	Group	Qty	Description	Lifecycle Phase
+  Primary Die	7HCT138DP66-WDQ 	WDQ	001	01	0	1	1-of-8 Decoder/Demultiplexer LSTTL Compatible Inputs	Production
+	  Die Size (X + Y W/Scribe Street): 833 x 610	PDPW : 54365
+  Package Kit	N96938G008	PKT	002	01	0	1	PKGKIT TSSOP16 CU (PH4)	Production
+	  Piece Parts
+	    1360100042	FRAME	010	01	0	1	LF TSSOP16 HD 1.08x1.08MM A194 FH RING Ag 288u STAMPED	Production
+	    1010150057	EPXY	020	01	0	0.000248	DA Sumitomo CRM-1076WB	Production
+	    1010160064	WIRE	030	01	0	0.02282	BW MAXSOFT HR Cu 1.0 mil	Production
+	    1010190074	MOLD	040	01	0	0.233	MC EMC SUMITOMO G600 13X5.6 HF	Production
+  BOI 67-Bonding Diagram	67AON56646H F	DOC	003	01	0	1	AC/ACT/HC/HCT/LCX/LVX/VHC/VHCT138, 139, 259, HC238, 390 Device Family	Production
+
+
+Marking Header Section
+Marking Style Configuration	TSSOP_2L_8C	
+Standard Marking Flag	
+PB Free Mark Character Flag	
+Front Side Marking
+Line1:HCT
+Line2:138A
+Tracecode:Y(LYW)
+
+
+
+
+OPN Packing Section
+PCQ Container | Desc	REEL | Tape and Reel	PCQ Quantity	2500
+MPQ Container | Desc	REEL | Tape and Reel	MPQ Quantity	2500
+Intermediate Full Box Container Type |
+Intermediate Box Container Size |
+Intermediate Full Box Container Quantity	|
+|
+5000	Intermediate Full Bag Container Type |
+Intermediate Bag Container Size |
+Intermediate Full Bag Container Quantity	|
+|
+
+Pin 1 Toward Upper Left
+
+
+
+Labeling Section
+MSL	1	MSL Temperature	260
+Pb Free Leads Flag	Y	Halide Free Flag	Y
+Pb Free Die Attach Flag	Y	Lead Finish Category (eCAT)	e4
+
+
+Document Group Section
+Document Num	Revision	Release Date	Title
+12MON01117D	AE	25-APR-25	Quality Assurance Inspection and Testing Sample Plan
+12MON03769D	Z	05-JUN-24	External Visual Inspection Criteria
+12MON49004E	AE	27-MAY-24	Subcontractors Bar Code Labeling
+12MRB17500B	FN	24-JAN-25	Finished Goods Packing and Long Term Storage Procedure
+12MRM92695A	AE	27-FEB-24	Lot Combination Control Requirements for onsemi
+48AON47611E	C	24-JUN-24	MC74HCT138A Series
+67AON46906E	C	28-MAR-22	MC74HCT138ADT
+67AON56646H	F	27-NOV-24	AC/ACT/HC/HCT/LCX/LVX/VHC/VHCT138, 139, 259, HC238, 390 Device Family
+
+
+BOM Links
+Up/Down Direction	Site	Top Part	Link
+Up	PH4	MC74HCT138ADTR2G	PH4_MC74HCT138ADTR2G_MC74HCT138ADTR2G-TST_TST.XML
+
+
+Revision History
+Rev	Rev Date	Details
+15	2025-APR-26 19:06:55	PART_OWNER NOTIFY_SUPPLIER previous_value:Peter Macha (r38409);new_value:NULL
+14	2025-APR-10 22:05:16	Added Component:67AON46906E
+Deleted Component:67AON46103E
+PACK_ORIENT_IMAGE_DOC_STD CONFIRM_REQUIRED previous_value:41AON89727E;new_value:41AON58532H
+13	2025-APR-04 17:33:38	Added Component:67AON46103E
+Added Component:7HCT138DP66-WDQ
+Added Component:N96938G008
+Added Component:N96938G002
+Added Component:67AON56646H
+Added Component:N96938G005
+Added Component:DBTHCT138ABC46B
+Added Component:1010150057
+Added Component:1360162001
+Added Component:1010190072
+Added Component:1360100041
+Added Component:1010160064
+Added Component:1360100042
+Added Component:1010190074
+Added Component:1010150057
+Added Component:MC74HCT138ADTR2G-TST
+Added Component:99MC74HCT138ADTG
+Added Component:1360100038
+Added Component:1360194003
+Added Component:1360162001
+Added Component:1010150057
+12	2024-OCT-16 23:10:44	
+PART_OWNER NOTIFY_SUPPLIER previous_value:Peter Macha (r38409);new_value:Jeff Galgo (ffx3xt)
+11	2024-JAN-17 21:17:08	Added Component:N96938G005
+Added Component:67AON46103E
+Added Component:7HCT138DP66-WDQ
+Added Component:N96938G002
+Added Component:DBTHCT138ABC46B
+Added Component:67AON56646H
+Added Component:N96938G008
+Added Component:1010150057
+Added Component:1360162001
+Added Component:1010190072
+Added Component:1360100041
+Added Component:MC74HCT138ADTR2G-TST
+Added Component:99MC74HCT138ADTG
+Added Component:1360100038
+Added Component:1360194003
+Added Component:1360162001
+Added Component:1010150057
+Added Component:1360100042
+Added Component:1010190072
+Added Component:1010150057
+Added Component:1010160064
+10	2024-JAN-13 00:30:50	PART_OWNER NOTIFY_SUPPLIER previous_value:NULL;new_value:Peter Macha (r38409)
+Added Component:7HCT138DP66-WDQ
+Added Component:67AON56646H
+Added Component:N96938G008
+Added Component:1360100042
+Added Component:1010190072
+Added Component:1010150057
+Added Component:1010160064
+PART_OWNER NOTIFY_SUPPLIER previous_value:NULL;new_value:Peter Macha (r38409)
+9	2022-OCT-27 23:35:40	Added Component:1010150057
+Added Component:1360162001
+Added Component:1010190072
+Added Component:1360100041
+Added Component:67AON46103E
+Added Component:N96938G005
+Added Component:DBTHCT138ABC46B
+Added Component:N96938G002
+Added Component:99MC74HCT138ADTG
+Added Component:MC74HCT138ADTR2G-TST
+Added Component:1360100038
+Added Component:1360194003
+Added Component:1360162001
+Added Component:1010150057
+8	2022-MAR-18 11:07:58	ASSMB_PLATFORM UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:SOSM - Small Outline Surface Mount
+ASSMB_PLATFORM_DESC UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:Small Outline Surface Mount
+7	2021-DEC-16 17:36:01	
+ASSMB_PLATFORM UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:SOSM - Small Outline Surface Mount
+ASSMB_PLATFORM_DESC UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:Small Outline Surface Mount
+6	2021-NOV-09 02:31:58	ASSMB_PLATFORM UPDATE_FILE_AND_VERSION previous_value:SOSM - Small Outline Surface Mount;new_value:NULL
+ASSMB_PLATFORM_DESC UPDATE_FILE_AND_VERSION previous_value:Small Outline Surface Mount;new_value:NULL
+HALIDE_FREE_FLG CONFIRM_REQUIRED previous_value:N;new_value:NULL
+CO_DIM_UOM UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:mm
+CO_LENGTH CONFIRM_REQUIRED previous_value:NULL;new_value:5
+CO_WIDTH CONFIRM_REQUIRED previous_value:NULL;new_value:4.4
+ASSMB_PLATFORM UPDATE_FILE_AND_VERSION previous_value:SOSM - Small Outline Surface Mount;new_value:NULL
+ASSMB_PLATFORM_DESC UPDATE_FILE_AND_VERSION previous_value:Small Outline Surface Mount;new_value:NULL
+SKIP_LOT_QC_FLG UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:Y
+CO_DIM_UOM UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:mm
+CO_LENGTH CONFIRM_REQUIRED previous_value:NULL;new_value:5
+CO_WIDTH CONFIRM_REQUIRED previous_value:NULL;new_value:4.4
+5	2021-SEP-17 14:27:30	
+DRY_PACK_FLG_OVERRIDE CONFIRM_REQUIRED previous_value:NULL;new_value:N
+4	2021-MAY-05 17:24:35	BODY_SIZE_DESC UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:4.4
+BODY_SIZE_DESC UPDATE_FILE_AND_VERSION previous_value:NULL;new_value:4.4
+3	2021-FEB-23 11:11:36	Added Component:DBTHCT138ABC46B
+Deleted Component:DBTHC138ABC46
+2	2021-JAN-28 14:13:31	Added Component:1010150057
+Added Component:1360162001
+Added Component:1010190072
+Added Component:1360100041
+Added Component:N96938G005
+1	2020-JUN-22 17:07:34	Initial version
+
+Intelligent Technology. Better Future.
+    
+ Language 
+About onsemi
+Locations
+Leadership
+Company Overview
+Company History
+Quality and Reliability
+Intellectual Property
+Investor Relations
+Financial Results
+Stock Performance
+Corporate Governance
+Investor Events
+Investor News
+Investor FAQs
+News & Media
+Press Announcements
+Blog
+In The News
+Media Contacts
+Careers
+Start Your Career
+Professionals
+Students
+Who We Are
+Compensation & Benefits
+Accessibility
+Do Not Sell or Share My Personal Information
+Terms of Use
+Terms of Sale
+Cookie Policy
+Privacy
+Subscribe
+Site Map
+© Copyright 1999-2025 Semiconductor Components Industries, LLC
